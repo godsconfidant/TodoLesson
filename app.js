@@ -1,1 +1,19 @@
-console.log("This Will be my todo");
+let todos = ["Get Groceries", "Wash car", "Make dinner"];
+
+todos.forEach(function (todoItem) {
+  let newDiv = document.createElement("div");
+  newDiv.innerHTML = todoItem;
+  document.body.appendChild(newDiv);
+});
+
+function addTodo() {
+  let textbox = document.getElementById("todo-title");
+  let title = textbox.value;
+  todos.push(title);
+}
+
+// Excersises 8
+
+function change() {
+  document.getElementById("todo-button").innerText = "Done";
+}

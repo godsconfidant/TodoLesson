@@ -11,9 +11,3 @@ function addTodo() {
   let title = textbox.value;
   todos.push(title);
 }
-
-// Excersises 8
-
-function change() {
-  document.getElementById("todo-button").innerText = "Done";
-}

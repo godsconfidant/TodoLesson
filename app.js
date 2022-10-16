@@ -1,13 +1,28 @@
 let todos = ["Get Groceries", "Wash car", "Make dinner"];
 
-todos.forEach(function (todoItem) {
-  let newDiv = document.createElement("div");
-  newDiv.innerHTML = todoItem;
-  document.body.appendChild(newDiv);
-});
+render();
 
 function addTodo() {
-  let textbox = document.getElementById("todo-title");
-  let title = textbox.value;
+  const textbox = document.getElementById("todo-title");
+  const title = textbox.value;
   todos.push(title);
+
+  render();
+}
+
+function render() {
+  // reset list before rendering
+  document.getElementById("todo-list").innerHTML = "";
+
+  todos.forEach(function (todoItem) {
+    const newDiv = document.createElement("div");
+
+    newDiv.innerText = todoItem;
+
+    const todoList = document.getElementById("todo-list");
+
+    todoList.appendChild(newDiv);
+
+    document.getElementById("todo-title").value = "";
+  });
 }

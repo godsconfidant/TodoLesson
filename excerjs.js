@@ -45,6 +45,8 @@ function submit() {
 
 // Excecises 9 - 1
 
+// Reminder to add comments to code
+
 let items = ["Apple", "Tomato", "Eggs"];
 
 let apple = document.getElementById("apple-btn");

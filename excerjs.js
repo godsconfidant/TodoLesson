@@ -87,3 +87,32 @@ function clearList() {
   document.getElementById(cart);
   cart.innerHTML = "";
 }
+
+// Exercise 9 - 2
+
+const measure = document.getElementById("measure");
+
+function convertToCm() {
+  const value = measure.value;
+  const convert = Number(value);
+
+  const length = value * 2.54;
+  console.log(length);
+
+  let ans = document.getElementById("result");
+  ans.innerText = length;
+
+  document.body.appendChild(ans);
+}
+
+function convertToInch() {
+  const value = measure.value;
+  const convertVal = Number(value);
+
+  const convert = value / 2.54;
+
+  const result = document.getElementById("result");
+
+  result.innerText = convert;
+  document.body.appendChild(result);
+}

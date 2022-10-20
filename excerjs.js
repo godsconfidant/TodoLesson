@@ -116,3 +116,33 @@ function convertToInch() {
   result.innerText = convert;
   document.body.appendChild(result);
 }
+
+// Exercises 10
+
+//  10 - 1
+
+let shopCart = [
+  {
+    name: "Apple",
+    price: 4,
+    qty: 2,
+  },
+  {
+    name: "Orange",
+    price: 3,
+    qty: 3,
+  },
+];
+
+function cartTotal(cartArray) {
+  let total = 0;
+
+  cartArray.forEach(function (item) {
+    // what is the difference between total = item * item   VS total = total + item * item
+    total = total + item.price * item.qty;
+  });
+  return total;
+}
+
+let x = cartTotal(shopCart);
+console.log(x);

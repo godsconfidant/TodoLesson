@@ -121,28 +121,34 @@ function convertToInch() {
 
 //  10 - 1
 
-let shopCart = [
-  {
-    name: "Apple",
-    price: 4,
-    qty: 2,
-  },
-  {
-    name: "Orange",
-    price: 3,
-    qty: 3,
-  },
+let cartArray = [
+  { name: "Apple", price: 4, qty: 2 },
+  { name: "Orange", price: 3, qty: 3 },
+  { name: "Lemons", price: 2, qty: 5 },
 ];
 
-function cartTotal(cartArray) {
+function cartTotal(getCart) {
   let total = 0;
-
-  cartArray.forEach(function (item) {
-    // what is the difference between total = item * item   VS total = total + item * item
-    total = total + item.price * item.qty;
+  getCart.forEach(function (item) {
+    total += item.price * item.qty;
   });
   return total;
 }
+cartTotal(cartArray);
 
-let x = cartTotal(shopCart);
-console.log(x);
+// 10 - 2
+
+const recpt = document.getElementById("recpt");
+
+function displayRecpt(getItems) {
+  recpt.innerHTML = "";
+
+  getItems.forEach(function (item) {
+    const recptLine = document.createElement("div");
+
+    recptLine.innerText = item.name + " $" + item.price + " * " + item.qty;
+    recpt.appendChild(recptLine);
+  });
+}
+
+displayRecpt(cartArray);

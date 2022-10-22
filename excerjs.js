@@ -139,9 +139,10 @@ cartTotal(cartArray);
 // 10 - 2
 
 const recpt = document.getElementById("recpt");
-
+const total = document.getElementById("total");
 function displayRecpt(getItems) {
   recpt.innerHTML = "";
+  total.innerHTML = "";
 
   getItems.forEach(function (item) {
     const recptLine = document.createElement("div");
@@ -149,6 +150,10 @@ function displayRecpt(getItems) {
     recptLine.innerText = item.name + " $" + item.price + " * " + item.qty;
     recpt.appendChild(recptLine);
   });
+
+  let totalLine = document.createElement("div");
+  totalLine.innerText = "Total = " + cartTotal(cartArray);
+  total.appendChild(totalLine);
 }
 
 displayRecpt(cartArray);

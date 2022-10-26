@@ -157,3 +157,15 @@ function displayRecpt(getItems) {
 }
 
 displayRecpt(cartArray);
+
+// Exercise 11
+
+//    11 - 1
+
+function createCart(cart) {
+  let total = 0;
+  let obj = Object.keys(cart);
+  console.log(obj);
+}
+
+createCart({ Apple: 3, Orange: 4, Egg: 2 });

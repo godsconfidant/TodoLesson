@@ -1,4 +1,4 @@
-// Todo App change ok
+// Todo App change
 
 let todos = [
   { title: "Get Groceries", dueDate: "2021-10-04", id: "id1" },

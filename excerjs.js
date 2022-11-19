@@ -158,7 +158,7 @@ function displayRecpt(getItems) {
 
 displayRecpt(cartArray);
 
-// Exercise 11
+// Exercise 11 add more notes
 
 //    11 - 1
 
